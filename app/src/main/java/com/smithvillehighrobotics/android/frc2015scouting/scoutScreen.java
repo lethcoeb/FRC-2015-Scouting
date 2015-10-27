@@ -35,6 +35,7 @@ public class scoutScreen extends AppCompatActivity{
     RadioGroup rgCan;
     RadioGroup rgNoodle;
     EditText notes;
+    Boolean valid = false;
 
 
     @Override
@@ -105,17 +106,31 @@ public class scoutScreen extends AppCompatActivity{
 
     }
 
+    private Boolean checkIfValid(){
+        //entries aren't blank
+        if(!teamNum.equals("") && !matchNum.equals("")){
+            //can't have noodle w/o can
+            if(!(hasCan==0&&hasNoodle==1)==true){
+                valid = true;
+            }
+        }else{
+            valid = false;
+        }
+
+       return valid;
+    }
+
     public void scored(View view){
         teamNum = teamNumber.getText().toString();
         matchNum = matchNumber.getText().toString();
-        if(!teamNum.equals("")&&!matchNum.equals("")){
+        if(checkIfValid()==true){
             Stack stack = new Stack(numberTotes, hasCan, hasNoodle, Integer.parseInt(matchNum), Integer.parseInt(teamNum));
             db.addStack(stack, teamNum);
             resetRBs();
             Toast.makeText(this, "Stack data saved!", Toast.LENGTH_SHORT).show();
         }
         else{
-            Toast.makeText(this, "enter valid numbers pls", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Invalid entry, check data", Toast.LENGTH_LONG).show();
         }
     }
    /*public void dropped(View view){
@@ -130,11 +145,14 @@ public class scoutScreen extends AppCompatActivity{
     public void exitScreen(View view){
 
         teamNum = teamNumber.getText().toString();
+        matchNum = matchNumber.getText().toString();
+        noteString = notes.getText().toString();
+        db.addNotes(noteString, teamNum, matchNum);
 
-        if(noteString!=""){
+       /* if(!noteString.equals("")){
             noteString = notes.getText().toString();
-            db.addNotes(teamNum, noteString);
-        }
+            db.addNotes(noteString, teamNum, matchNum);
+        }*/
 
         finish();
     }

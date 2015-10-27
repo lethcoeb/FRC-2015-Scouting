@@ -1,5 +1,6 @@
 package com.smithvillehighrobotics.android.frc2015scouting;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -49,6 +50,12 @@ public class ReviewScreen extends AppCompatActivity {
         stackAdapt.changeCursor(stackCursor);
         lvStax.setAdapter(stackAdapt);
 
+    }
+
+   public void notes(View view){
+
+        Intent i = new Intent(view.getContext(), com.smithvillehighrobotics.android.frc2015scouting.NotesReview.class);
+        startActivity(i);
     }
 
 

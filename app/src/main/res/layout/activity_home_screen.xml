@@ -12,7 +12,7 @@
         android:layout_marginTop="100dp"
         >
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:onClick="scoutScreen"
         android:layout_centerHorizontal="true"
@@ -22,7 +22,7 @@
         android:backgroundTint="@color/darkpurp"
         android:height="30dp"/>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:onClick="reviewScreen"
         android:layout_centerHorizontal="true"
@@ -33,14 +33,25 @@
         android:backgroundTint="@color/darkpurp"
         android:layout_margin="15dp"/>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:onClick="exportData"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/reviewButton"
         android:text="Export"
         android:textAllCaps="false"
-        android:backgroundTint="@color/darkpurp" />
+        android:backgroundTint="@color/darkpurp"
+        android:id="@+id/exportButton"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:onClick="instructions"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/exportButton"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/darkpurp"
+            android:text="Instructions"
+            android:textAllCaps="false"/>
     </LinearLayout>
     <TextView android:text="Becker Lethcoe" android:layout_width="wrap_content"
     android:layout_height="wrap_content"

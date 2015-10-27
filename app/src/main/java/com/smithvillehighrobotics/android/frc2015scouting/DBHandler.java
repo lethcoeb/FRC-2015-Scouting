@@ -38,8 +38,9 @@ public class DBHandler extends SQLiteOpenHelper{
 
 
         String query2 = "CREATE TABLE IF NOT EXISTS " + "notes" + "(" +
+                COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_TEAMNUMBER + " INT, " +
-                COLUMN_MATCHNUMBER + "INT, " +
+                COLUMN_MATCHNUMBER + " INT, " +
                 COLUMN_NOTES + " VARCHAR" +
                 ");";
         db.execSQL(query2);
@@ -86,9 +87,10 @@ public class DBHandler extends SQLiteOpenHelper{
         Log.i("LOGCAT", "stack added");
     }
 
-    public void addNotes(String notes, String teamNum){
+    public void addNotes(String notes, String teamNum, String matchNum){
         ContentValues values = new ContentValues();
         values.put(COLUMN_TEAMNUMBER, Integer.parseInt(teamNum));
+        values.put(COLUMN_MATCHNUMBER, Integer.parseInt(matchNum));
         values.put(COLUMN_NOTES, notes);
         SQLiteDatabase db = getWritableDatabase();
         db.insert("notes", null, values);
@@ -100,6 +102,10 @@ public class DBHandler extends SQLiteOpenHelper{
     public void deleteStack(String stackName, String teamNumber){
         SQLiteDatabase db= getWritableDatabase();
         db.execSQL("DELETE FROM " + "data" + " WHERE " + COLUMN_ID + "=\"" + stackName + "\"") ;
+    }
+    public void deleteNote(String noteName, String teamNumber){
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL("DELETE FROM notes WHERE "  + COLUMN_ID + "=\"" + noteName + "\"");
     }
 
 }

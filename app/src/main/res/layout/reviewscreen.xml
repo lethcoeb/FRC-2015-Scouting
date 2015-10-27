@@ -5,17 +5,14 @@
 
 
 
-    <TextView
+    <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:height="40dp"
-        android:text="Long Press to Delete"
-        android:gravity="center"
-        android:textSize="20sp"/>
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="3dp"
-        android:background="@color/darkslate"></View>
+        android:text="Review Notes"
+        android:onClick="notes"
+        android:backgroundTint="@color/darkpurp"
+        android:textAllCaps="false"/>
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -16,6 +16,7 @@ import java.nio.channels.FileChannel;
 public class HomeScreen extends AppCompatActivity {
 
 
+
     static final String folder_main = "Scouting2015";
 
     @Override
@@ -71,6 +72,10 @@ public class HomeScreen extends AppCompatActivity {
     }
     public void reviewScreen(View view){
         Intent i = new Intent(getApplicationContext(), com.smithvillehighrobotics.android.frc2015scouting.ReviewScreen.class);
+        startActivity(i);
+    }
+    public void instructions(View view){
+        Intent i = new Intent(getApplicationContext(), com.smithvillehighrobotics.android.frc2015scouting.Instructions.class);
         startActivity(i);
     }
 }
