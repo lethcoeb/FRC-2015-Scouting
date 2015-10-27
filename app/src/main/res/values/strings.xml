@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FRC2015 Scouting</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <color name="slate">#373737</color>
+    <color name="white">#FFFFFF</color>
+    <color name="purp">#512DA8</color>
+    <color name="darkpurp">#4527A0</color>
+    <color name="black">#000000</color>
+    <color name="darkslate">#323232</color>
+</resources>

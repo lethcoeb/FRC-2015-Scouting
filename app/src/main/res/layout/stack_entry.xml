@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp">
+
+    <TextView
+        android:id="@+id/stackidREV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="its lit"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Team " />
+
+            <TextView
+                android:id="@+id/teamNumberREV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="its lit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Match " />
+
+            <TextView
+                android:id="@+id/matchNumberREV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="its lit" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:paddingLeft="40dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totes: " />
+
+            <TextView
+                android:id="@+id/totesREV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="its lit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Can: " />
+
+            <TextView
+                android:id="@+id/canREV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="its lit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Noodle: " />
+
+            <TextView
+                android:id="@+id/noodleREV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="its lit" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
